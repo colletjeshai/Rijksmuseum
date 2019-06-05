@@ -1,0 +1,38 @@
+{
+	"analytics-uuid": "95fbf4d2-182f-4512-94de-fc33ccad2f0b",
+	"motd": {
+		"minVersion": "3.0.5"
+	},
+	"motd.fetched": 1559726257073,
+	"usage": true,
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "104969929495438437484",
+		"email": "nicolle.shaira14@gmail.com",
+		"email_verified": true,
+		"at_hash": "lCQkKjPs2Mo0zeogBDfBBQ",
+		"iat": 1559246060,
+		"exp": 1559249660
+	},
+	"tokens": {
+		"expires_at": 1559729856674,
+		"refresh_token": "1/UbPqXljgVyATTZm6aI29n-iwaabqwZj5jL28o78x2QxNbRXpM1W2_4O1_zanIUeF",
+		"scopes": [
+			"email",
+			"https://www.googleapis.com/auth/cloud-platform",
+			"https://www.googleapis.com/auth/cloudplatformprojects.readonly",
+			"https://www.googleapis.com/auth/firebase",
+			"openid"
+		],
+		"access_token": "ya29.GlwfB1I7Nc_elcUXu4QDw32p5htgo1B0QQaZtLPfjP8VWPO1TzZdRCsLfk8OOozXWLKU3LxNZwjnz7t0NeNxojS1S5O25bPE5yDFYdfrYITyVlq753kYTSz7PZJiIg",
+		"expires_in": 3600,
+		"scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloudplatformprojects.readonly openid https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/cloud-platform",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM3ZjUyMmQwMzIyODRkMjUyYmVlNGZkODA1NjBjZWZhMGZiNjBjMzkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA0OTY5OTI5NDk1NDM4NDM3NDg0IiwiZW1haWwiOiJuaWNvbGxlLnNoYWlyYTE0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoidUFvc1VGX0l0enVIOGJGNjBZN3JfdyIsImlhdCI6MTU1OTcyNjI1OSwiZXhwIjoxNTU5NzI5ODU5fQ.IxmurtYf-sBmK9MuXeiQujmtsztmg0NVBUfEzVkdAALVL65ZNf8no-1PMzyhcJ5f8S7Jbc4w0mW-CZOfyzf8P80RoIVAzHYDr0bgS7MggHU1wzx21SwTQm-dolHnrswM88JItxP2X2kqLaI3cwbAPjsvdvUeBxHToEQlhtwnARarVNNJ1Sqt3A7zATy1WXIuYYYGpQxlmfGR6EYzTJZ6-CIsjTH9t0mUVlszILNl4xrlkRjYg-O-6NWd9vHmvkckCFrHVRioblg0KPfWzMFEsuCuZhXxRDNAsRAOC5HvUYTe_Q32L9Wt-7HQMURQ0qRoVMmawHGJhCRQpBWMPfjxdw"
+	},
+	"activeProjects": {
+		"C:\\Users\\gerli": "project-imm-1515f"
+	}
+}
