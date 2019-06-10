@@ -1,17 +1,42 @@
-$.getJSON("https://www.rijksmuseum.nl/api/nl/collection?q=Q&key=kNQna9vq&format=json",function(artObjects){
-  console.log(artObjects);
+$(document).ready(function(){
+// search the collection using a JSON call
 
-  $.each(artObjects, function(index, object) {
-    console.log(object);
+      function search(searchquery) {
+        return $.getJSON("https://www.rijksmuseum.nl/api/nl/collection?q=Q&key=kNQna9vq&format=json".replace("Q", searchquery));
+      }
 
-    var name = object.objectNumber;
-    var bio = object.title;
+      // creates a thumbnail image for the specified art object
+      function thumbnail(object) {
+        return $("<div>")
+          .addClass("thumbnail")
+          .css("background-image", "url(" + object.webImage.url.replace("s0", "s128") +")");
+      }
 
+      // fire the search searchquery
+      search($("#searchquery").val())
+        .done(function(results) {
+          $("#result-table").empty();
 
-    $('.name').text(name);
-     $('.bio').text(bio);
+          var $table = $("#result-table");
+          $table.html("");
 
+          // create a row for each art object found
+          $.each(results.artObjects, function(index, object) {
+            console.log(object);
 
-    $('.output').append('<h1 class="name">' + name + '</h1><h2 class="bio">' + bio + '</h2>');
-  });
+            var $row = $('<tr class="child"><td>'
+              + object.objectNumber
+              +'</td><td class="thumbnail">'
+              +'</td><td>'
+              + object.title
+              +'</td></tr>').appendTo($table);
+
+            $row.find(".thumbnail").append(thumbnail(object));
+
+            // make each row clickable, navigating to the relevant page on the Rijksmuseum website
+            $row.on("click", function() {
+              document.location = object.links.web;
+            });
+          })
+        });
 });
