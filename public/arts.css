@@ -1,0 +1,280 @@
+
+
+header {
+	align: center;
+	position:relative;
+	left:0;
+	top:0;
+
+}
+
+h2	{
+  top:-10px;
+  color: black;
+  font-family: Verdana, Arial, sans-serif;
+  position:absolute;
+	font-size:2vw;
+}
+
+h3 {
+  font-family: Verdana, Arial, sans-serif;
+  position:absolute;
+  margin-bottom: 2px;
+}
+
+table {
+	width: 100%;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+table tr {
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+table th {
+	margin-left: 10px;
+	width:400px;
+	text-align: center;
+	height: 50px;
+}
+
+table td {
+	background-color: rgb(255, 255, 255);
+	margin-left: 10px;
+	text-align:center;
+	width:400px;
+	height: 75px;
+	border: solid;
+	border-color: darkgrey;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 59%;
+  grid-gap: 10px;
+  background-color: Lightgray;
+  padding: 10px;
+  margin-top:10px;
+	height:auto;
+	width:auto;
+	overflow:auto;
+}
+
+.grid-container > div {
+
+
+}
+
+.item1 {
+	grid-columns: 1/ span 1;
+	border: none;
+	height:100%;
+	position:relative;
+
+
+}
+
+#map {
+	height: 100%;
+	width: 90%;
+	position: relative;
+
+}
+.item2 {
+  border: none;
+  grid-columns: 2/span 1;
+  flex: 85%;
+  padding: 15px;
+	height:auto;
+	margin: 0 auto;
+	position:relative;
+
+}
+
+.lijst {
+
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+		text-align:center;
+    margin: 0 auto;
+    padding:0px;
+}
+
+.paint {
+		position: absolute;
+		top: 53px;
+		left: 640px;
+}
+
+#container_table{
+   position:relative;
+}
+
+#container_table img{
+   position:absolute;
+   right:0;
+   top:0;
+}
+
+
+
+@media only screen and (max-width: 360px) {
+
+	.grid-container, .item1, .item2{
+		width:100%;
+	}
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table th {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+header {
+	text-align: center;
+	position:relative;
+	left:0;
+	top:0;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 59%;
+  grid-gap: 10px;
+  background-color: Lightgray;
+  padding: 10px;
+  margin-top:10px;
+	height:auto;
+	width:auto;
+	overflow:auto;
+}
+
+.grid-container > div {
+
+
+}
+
+.item1 {
+	grid-columns: 1/ span 1;
+	border: none;
+	height:100%;
+	position:relative;
+
+
+}
+
+#map {
+	height: 100%;
+	width: 90%;
+	position: relative;
+
+}
+.item2 {
+  border: none;
+  grid-columns: 2/span 1;
+  flex: 85%;
+  padding: 15px;
+	height:auto;
+	margin: 0 auto;
+	position:relative;
+
+}
+
+
+.lijst {
+
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+
+		text-align:center;
+    margin: 0 auto;
+    padding:0px;
+}
+
+.paint {
+		position: absolute;
+		top: 53px;
+		left: 640px;
+}
+
+#container_table{
+   position:relative;
+}
+
+#container_table img{
+   position:absolute;
+   right:0;
+   top:0;
+}
+
+eader {
+	text-align: center;
+	position:relative;
+	left:0;
+	top:0;
+}
+
+h2	{
+  top:-10px;
+  color: black;
+  font-family: Verdana, Arial, sans-serif;
+  position:absolute;
+	font-size:2vw;
+}
+
+h3 {
+  font-family: Verdana, Arial, sans-serif;
+  position:absolute;
+  margin-bottom: 2px;
+}

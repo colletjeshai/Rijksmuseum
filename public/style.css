@@ -1,0 +1,139 @@
+
+
+body {
+	background-image: url("https://images.arcadis.com/media/6/6/8/%7B66844D25-A8FF-46FB-BBF6-E5855A6087E3%7DRijksmuseumAmsterdam-main.jpg?width=1920&height=0&mode=crop&anchor=top");
+
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+header{
+  position: center;
+}
+
+
+h5 {
+	font-family: Verdana, Arial, sans-serif;
+	text-align:center;
+	font-size: 20px;
+}
+
+p {
+	font-family: Verdana, Arial, sans-serif;
+	text-align:center;
+	font-size: 20px;
+}
+
+h1{
+  text-align:center;
+  font-size: 18vw;
+  color: white;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.form-group{
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 5px;
+  width:100px;
+  height:100px;
+
+}
+
+input {
+	height:40px;
+	width:200px;
+}
+
+input[type="text"]{
+    border: none;
+    padding: 10px;
+    margin-left: 610px;
+    height: 40px;
+    width: 200px;
+    border:1px solid #eaeaea;
+    outline:none;
+    text-align:center;
+}
+
+input:hover{
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+
+input:focus{
+    border-color:#4d90fe;
+}
+
+table {
+	margin-top:10;
+	width: 70%;
+}
+
+table tr {
+	border: 1px solid black;
+}
+
+table td {
+	border: 1px solid black;
+	margin-left: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 360px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}

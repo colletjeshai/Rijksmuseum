@@ -1,0 +1,84 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="arts.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="p5.dom.min.js"></script>
+	<script src="p5.sound.min.js"></script>
+	<title>TijdRijks, schilderij</title>
+</head>
+
+<body>
+
+	<header>
+		  <a href="index.html"> <h2> TijdRijks</h2> </a>
+		  <img src="white.png" class= "lijst" height="310" width="350">
+			<script src="mousesketch.js"></script>
+	</header>
+
+	<div class="grid-container">
+		<div class="item1">
+			<div id="map"></div>
+			<script>
+
+				function initMap() {
+
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 14,
+						center: {lat: 52.367594, lng: 4.894501}
+					});
+
+					// Create an array of alphabetical characters used to label the markers.
+					var labels = '123456789';
+
+					// Add some markers to the map.
+					// Note: The code uses the JavaScript Array.prototype.map() method to
+					// create an array of markers based on a given "locations" array.
+					// The map() method here has nothing to do with the Google Maps API.
+					var markers = locations.map(function(location, i) {
+						return new google.maps.Marker({
+							position: location,
+							label: labels[i % labels.length]
+						});
+					});
+
+					// Add a marker clusterer to manage the markers.
+					var markerCluster = new MarkerClusterer(map, markers,
+							{imagePath: 'markers/m'});
+				}
+				var locations = [
+					{lat: 52.367594, lng: 4.894501},
+					{lat: 52.373133, lng: 4.891123},
+					{lat: 52.371183, lng: 4.899476},
+					{lat: 52.360053, lng: 4.885278},
+				]
+			</script>
+			<script src="markerclusterer.js">
+			</script>
+			<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMq1A2QiybkvGqTKnfO-cPeQvJFxn4fuw&callback=initMap">
+	    </script>
+		</div>
+
+		<div class="item2">
+				<table id="myTable">
+					<tr>
+					  <!--When a header is clicked, run the sortTable function, with a parameter,
+					  0 for sorting by names, 1 for sorting by country: -->
+					  <th onclick="sortTable(0)">Date</th>
+					  <th onclick="sortTable(1)">Place</th>
+					</tr>
+
+					<tr><td>1645</td><div id="container_table"><img class="info" id="information" onclick="alert('Commissioned by or for the sitters for the great hall of the Kloveniersdoelen (the headquarters of the arquebusiers civic guard), Amsterdam; first mentioned in the Kloveniersdoelen, 1653: Ibid. daer naast aanvolgen. Frans Benning Cock Capn. en Witt van Ruijtenburg Lut. geschildert van Rembrand an 1642.;{Schaep 1653, p. 135, no. 4.} transferred to the Small Council of War Chamber,Kleine Krijgsraadkamer, in the Town Hall on Dam square, Amsterdam, 1715 {SAA, Archief van de Thesaurieren Ordinaris, Resolutieboek 28 October 1711-28 January 1723, 23 May 1715: Is geordonneert, omme het groote Stuk Schilderij van Rembrandts hangende op de Saal van de Colveniersdoelen Schoon te maken, en als dan hetzelve te Plaetsen op de Kreygsraats Kamer van het Stadhuys. First published in Dyserinck 1890, p. 245.} transferred to the house of Cornelis Sebille Roos (the Trippenhuis), 29 Kloveniersburgwal, Amsterdam, 1808: (See Brugmans 1913, p. 60.) on loan to the museum from the City of Amsterdam since 1808')" src="information.png" alt="information" width="30" height="30"><td>Kloveniersdoelen, Amsterdam</td></tr>
+					<tr><td>1715</td><td>Town Hall on Dam square, Amsterdam</td></tr>
+					<tr><td>1808</td><td>The Trippenhuis, home of Cornelis Sebille Roos</td></tr>
+					<tr><td>1808</td><td>Rijksmuseum</td></tr>
+				</table>
+		</div>
+	</div>
+
+</body>
+</html>

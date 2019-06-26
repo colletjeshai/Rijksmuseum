@@ -1,0 +1,143 @@
+header {
+	text-align: center;
+	position:relative;
+	left:0;
+	top:0;
+}
+
+h2	{
+  top:-20px;
+  color: black;
+  font-family: Verdana, Arial, sans-serif;
+  position:absolute;
+	font-size:2vw;
+}
+
+h3 {
+  font-family: Verdana, Arial, sans-serif;
+  position:absolute;
+  margin-bottom: 2px;
+}
+
+table {
+	width: 100%;
+	font-family: Verdana, Arial, sans-serif;
+	border: none;
+}
+
+table tr {
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+table td {
+	margin-left: 10px;
+	text-align:center;
+	width: 600px;
+	height: 100px;
+	border: none;
+}
+
+table caption{
+	font-size: 150%;
+	border: none
+}
+table tr:hover {
+  background-color: darkgrey;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  background-color: Lightgray;
+  padding: 10px;
+  margin-top:10px;
+	height: auto;
+	width:100%;
+}
+
+.grid-container > div {
+	width: 100%;
+	background-color: Lightgrey;
+	height: auto;
+}
+
+.lijst {
+		position: relative;
+		top: 0;
+		left: 0;
+}
+
+.paint {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (max-width: 360px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table th{
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+paint.img{
+	height:300;
+	width:250;
+}
+table img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 5px;
+  width:200px;
+  height:200px;
+
+}
