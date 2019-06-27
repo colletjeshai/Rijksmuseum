@@ -136,6 +136,7 @@ $(document).ready(function(){
     ];
 
 
+//Code is based by watching youtube videos
 $('#search').keyup(function(){
     var input = $(this).val();
 
@@ -145,34 +146,37 @@ $('#search').keyup(function(){
     return;
     }
           var regex = new RegExp(input, "i");
-          var output = '<div id="row">';
+          var result = '<div id="row">';
           var count = 1;
       $.each(data, function(key, val){
 
       if ((val.name.search(regex) != -1)) {
-        output += '<div><tr onclick="window.location.href='+val.url+'">';
-        output += '<td><div><img src="'+val.image+'" alt="'+ val.name +'" /></div></td>';
-        output += '<div">';
-        output += '<td><p>' + val.name + '</p></td>';
-        output += '<td><p>' + val.work + '</p></td>';
-        output += '</div>';
-        output += '</tr></div>';
+        result += '<div><tr onclick="window.location.href='+val.url+'">';
+        result += '<td><div><img src="'+val.image+'" alt="'+ val.name +'" /></div></td>';
+        result += '<div">';
+        result += '<td><p>' + val.name + '</p></td>';
+        result += '<td><p>' + val.work + '</p></td>';
+        result += '</div>';
+        result += '</tr></div>';
 
 
         if(count%2 == 0){
-        output += '</div><div id="row">'
+        result += '</div><div id="row">'
         }
         count++;
         }
       });
-      output += '</div>';
-      $('#resultsdiv').html(output);
+      result += '</div>';
+      $('#resultsdiv').html(result);
 
       });
 });
 
 
-
+/* source for this function:
+	https://www.w3schools.com/howto/howto_js_sort_table.asp
+	The table sort by name by clicking the header so the best before date and
+	amount also sort by name. */
 
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
